@@ -32,8 +32,7 @@ public class CheckerImpl implements Checker
                             D[1] = 0;
                         }
                     }
-                }
-                    
+                }              
             }
         }
         for(int i=0; i<3; i++) {
@@ -77,9 +76,7 @@ public class CheckerImpl implements Checker
         }
         if(winnerFlag) {
             return winner;
-        }
-        
-        
+        }      
         if(D[0] == -1) {
             int entry = table[0][0];
             boolean flag = true;
@@ -111,8 +108,7 @@ public class CheckerImpl implements Checker
             if(flag) {
                 winner = entry;
                 winnerFlag = true;
-            }
-            
+            }           
         }
         if(winnerFlag) {
             return winner;

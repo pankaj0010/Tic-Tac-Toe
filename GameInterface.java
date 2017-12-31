@@ -40,12 +40,9 @@ public class GameInterface implements ActionListener
     }
     public static void deactivateGame()
     {
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-                button[i][j].setEnabled(false);
+        for(int i=0;i<3;i++)
+            for(int j=0;j<3;j++)
                 button[i][j].removeActionListener(IOhandler);
-            }
-        }
     }
     private void init()
     {
@@ -58,7 +55,16 @@ public class GameInterface implements ActionListener
         boardPanel.setSize(new Dimension(300,240));
         textPanel.setSize(new Dimension(300,60));
 
+        //textButton.setEnabled(false);
+        textButton.setBackground(new Color(100,50,90));
+        textButton.setForeground(Color.white);
+        newButton.setBackground(new Color(100,50,90));
+        newButton.setForeground(Color.white);
         newButton.addActionListener(this);
+        newButton.setContentAreaFilled(false);
+        newButton.setOpaque(true);
+        newButton.setFocusPainted(false);
+        newButton.setRolloverEnabled(false);
         
         mainPanel.setLayout(new BorderLayout());
         boardPanel.setLayout(new GridLayout(3,3));
