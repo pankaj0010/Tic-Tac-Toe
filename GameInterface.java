@@ -15,16 +15,11 @@ public class GameInterface
     IOHandler IOhandler;
     private static JButton button[][]=new JButton[3][3];
     JButton textButton=new JButton();
-    public GameInterface() {
+    public GameInterface() 
+    {
         board = new BoardImpl();
         IOhandler = new IOHandler(board,textButton);
     }
-
-    public static JButton[][] getButtons()
-    {
-        return button;
-    }
-
     public static void deactivateGame()
     {
         for(int i=0;i<3;i++)

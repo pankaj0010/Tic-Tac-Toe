@@ -6,9 +6,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 public class IOHandler implements ActionListener
 {
-    private static int positionX;
-    private static int positionY;
-    private static Board board;
+    private Board board;
     private JButton displayButton; 
     public IOHandler(Board board, JButton displayButton) 
     {
@@ -19,8 +17,8 @@ public class IOHandler implements ActionListener
     public void actionPerformed(ActionEvent e)
     {      
         JButton button=(JButton)e.getSource();
-        positionX=(int)button.getClientProperty("row");
-        positionY=(int)button.getClientProperty("column"); 
+        int positionX=(int)button.getClientProperty("row");
+        int positionY=(int)button.getClientProperty("column"); 
         int entry = board.numberOfEntries();
         if(board.getData(positionX, positionY) == 0) {
             if(entry % 2 == 0){
