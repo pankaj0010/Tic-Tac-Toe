@@ -1,0 +1,1 @@
+A two-player GUI implementation of Tic-tac-toe using Java Swing library.
